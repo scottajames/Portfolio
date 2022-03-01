@@ -1,0 +1,153 @@
+:root {
+  --black: #252530;
+  --blue: #2C2C37;
+  --grey: #65656A;
+  --white: #FAFAFC;
+  --yellow: #F8C246;
+  --text-size-0: 1.5vmin;
+  --text-size-1: 2vmin;
+  --text-size-2: 2.5vmin;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--text-size-2);
+}
+h2 {
+  color: var(--yellow);
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--text-size-1);
+}
+h3 {
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--text-size-1);
+}
+a {
+  color: var(--grey);
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--text-size-1);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--white);
+}
+label {
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--text-size-0);
+}
+p {
+  color: var(--grey);
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--text-size-0);
+}
+body {
+  height: 100vh;
+}
+#Content {  display: grid;
+  grid-template-columns: 10vw 80vw;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-gap: 0vh 5vw;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header_Div divMain";
+}
+
+#Header_Div {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.3fr 0.7fr 1.5fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Bio"
+    "Awards"
+    "Code_Progress"
+    "Navigation";
+  grid-area: Header_Div;
+}
+
+.Bio {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "BioImage"
+    "BioText";
+  grid-area: Bio;
+}
+
+.Awards {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "AwardsTitle"
+    "Achievements";
+  grid-area: Awards;
+}
+
+.Code_Progress {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ".";
+  grid-area: Code_Progress;
+}
+.Navigation {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ".";
+  grid-area: Navigation;
+}
+
+#divMain {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Head"
+    "Projects";
+  grid-area: divMain;
+}
+
+.Head {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "HeadText HeadImage";
+  grid-area: Head;
+}
+
+.HeadText { grid-area: HeadText; }
+
+.HeadImage { grid-area: HeadImage; }
+
+.Projects {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Project";
+  grid-area: Projects;
+}
+.project {
+  background-color: var(--blue);
+  margin: 1vh 1vw;
+}
