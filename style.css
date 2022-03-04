@@ -65,7 +65,7 @@ body {
 
 #Header_Div {  display: grid;
   grid-template-columns: 15vw;
-  grid-template-rows: 20vh 20vh 40vh 10vh;
+  grid-template-rows: 15vh 20vh 40vh 10vh;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -85,7 +85,7 @@ body {
   text-align: center;
   align-self: center;
 }
-.Code_Progress {
+.Code_Progress, .Awards {
   align-self: center;
 }
 
@@ -93,16 +93,13 @@ body {
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-auto-flow: row;
-  grid-template-areas:
-    "BioImage"
-    "BioText";
   grid-area: Bio;
   background-color: var(--blue);
-  max-height: 150px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .BioImage img {
-  width: 40%;
+  width: 13vw;
+  max-width: 100px;
 }
 .Awards {  display: grid;
   grid-template-columns: 13vw;
@@ -110,7 +107,6 @@ body {
   grid-template-areas:
     "Achievements";
   grid-area: Awards;
-  align-self: center;
   text-align: center;
 }
 .Code_Progress {  display: grid;
