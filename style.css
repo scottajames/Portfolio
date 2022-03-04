@@ -57,11 +57,14 @@ body {
   grid-auto-flow: row;
   grid-template-areas:
     "Header_Div divMain";
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 #Header_Div {  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1.3fr 0.7fr 1.5fr 0.5fr;
+  grid-template-columns: 10vw;
+  grid-template-rows: 20vh 20vh 15vh 10vh;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -70,84 +73,121 @@ body {
     "Code_Progress"
     "Navigation";
   grid-area: Header_Div;
+  background-color: var(--black);
+  position: fixed;
+  height: 100vh;
 }
 
 .Bio {  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
   grid-auto-flow: row;
   grid-template-areas:
     "BioImage"
     "BioText";
   grid-area: Bio;
+  background-color: var(--blue);
 }
-
+.BioImage {
+  align-self: center;
+}
+.BioImage, .BioText {
+  text-align: center;
+}
 .Awards {  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
   grid-template-areas:
-    "AwardsTitle"
     "Achievements";
   grid-area: Awards;
+  text-align: center;
+  margin: 5vh 0.5vw;
 }
 
 .Code_Progress {  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
   grid-template-areas:
-    ".";
+    "Code_Progress";
   grid-area: Code_Progress;
+  margin: 10vh 0.5vw;
 }
 .Navigation {  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
   grid-auto-flow: row;
   grid-template-areas:
-    ".";
+    "Navigation";
   grid-area: Navigation;
+  display: block;
+  text-align: center;
+  position: fixed;
+  bottom: 5vh;
+}
+.Navigation a {
+  margin: 0vh 1vw;
 }
 
 #divMain {  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 80vw;
+  grid-template-rows: 35vh 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "Head"
     "Projects";
   grid-area: divMain;
+  position: relative;
+  top: 5vh;
 }
 
 .Head {  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "HeadText HeadImage";
   grid-area: Head;
+  background-color: var(--black);
 }
 
-.HeadText { grid-area: HeadText; }
-
+.HeadText { grid-area: HeadText; margin: 0vh 2vw }
+.HeadText p {
+  margin: 1vh 0vw 5vh 0vw;
+  width: 40vw;
+}
+.HeadText a {
+  color: var(--blue);
+  border: none;
+  border-radius: 5px;
+  padding: 1.5vh 3vw;
+  background-color: var(--yellow);
+}
 .HeadImage { grid-area: HeadImage; }
-
-.Projects {  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Project";
-  grid-area: Projects;
+.HeadImage img {
+  width: 15vw;
 }
+.HeadText, .HeadImage {
+  align-self: center;
+  justify-self: center;
+}
+
+.Projects { grid-area: Projects;
+  align-self: center;
+  }
 .project {
   background-color: var(--blue);
   margin: 1vh 1vw;
+  padding: 1vh 1vw;
+  width: 20vw;
+  display: inline-block;
+  text-align: left;
+  overflow:overlay;
+  white-space: pre-line;
+}
+.project a {
+  float: right;
+  color: var(--yellow);
+  font-size: var(--text-size-0);
 }
