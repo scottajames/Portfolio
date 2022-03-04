@@ -226,6 +226,9 @@ body {
   color: var(--yellow);
   font-size: var(--text-size-0);
 }
+.FooterLink {
+  display: none;
+}
 
 
 
@@ -265,10 +268,11 @@ body {
 }
   .FooterLink {
     grid-area: FooterLink;
+    display: block;
     justify-self: center;
+    padding-bottom: 5vh;
 }
   .FooterLink a {
     margin: 0vh 2.5vw;
-    padding-bottom: 5vh;
   }
 }
