@@ -92,15 +92,14 @@ body {
 
 .Bio {  display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-rows: auto auto;
   grid-auto-flow: row;
   grid-area: Bio;
   background-color: var(--blue);
   overflow: hidden;
 }
 .BioImage img {
-  width: 35%;
-  min-width: 50px;
+  width: 5vw;
   max-width: 100px;
 }
 .Awards {  display: grid;
