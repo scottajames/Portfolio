@@ -101,6 +101,7 @@ body {
 .BioImage img {
   width: 35%;
   min-width: 50px;
+  max-width: 100px;
 }
 .Awards {  display: grid;
   grid-template-columns: 13vw;
