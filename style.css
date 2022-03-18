@@ -209,19 +209,28 @@ body {
 }
 
 .Projects { grid-area: Projects;
-  align-self: center;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Project_txt {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-basis: 100%;
+}
 .project {
   background-color: var(--blue);
+  width: 20vw;
   margin: 1vh 1vw;
   padding: 1vh 1vw;
-  width: 20vw;
-  display: inline-block;
   text-align: left;
-  overflow:overlay;
   white-space: pre-line;
+  flex-wrap: wrap;
+  flex-grow: 1;
 }
 .project a {
+  position: relative;
+  bottom: 0;
   float: right;
   color: var(--yellow);
   font-size: var(--text-size-0);
